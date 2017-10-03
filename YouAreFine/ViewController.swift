@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import AudioToolbox
 
 enum mood: String {
     case happy
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet var sadButton: UIButton!
     @IBOutlet var historyButton: UIButton!
     @IBOutlet var midLabel: UILabel!
+    @IBOutlet var banner: UILabel!
     
     var historyDict: Dictionary<mood,Date>?
 
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         viewSetup()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        
+        print("notifications cancelled")
     }
     
     func viewSetup() {
@@ -41,15 +43,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func happy() {
-        scheduleNotification(repeatInterval: 60)
+        scheduleNotification(repeatInterval: 3600)
+        presentBanner(text: "Keep it up!")
     }
     
     @IBAction func medium() {
-        scheduleNotification(repeatInterval: 30)
+        scheduleNotification(repeatInterval: 1800)
+        presentBanner(text: "Keep your head up!")
     }
     
     @IBAction func sad() {
-        scheduleNotification(repeatInterval: 10)
+        scheduleNotification(repeatInterval: 60)
+        presentBanner(text: "Don't worry. Things will get better.")
     }
     
     @IBAction func history() {
@@ -66,8 +71,21 @@ class ViewController: UIViewController {
         let request = UNNotificationRequest(identifier: "Fine", content: content, trigger: trigger)
         let center = UNUserNotificationCenter.current()
         center.add(request, withCompletionHandler: nil)
+        print("Scheduled every \(repeatInterval) seconds.")
     }
     
+    func presentBanner(text: String) {
+        
+        banner.text = text
+        UIView.animate(withDuration: 1, animations: {
+            self.banner.alpha = 1
+        }, completion: { (finished: Bool) in
+            UIView.animate(withDuration: 1, delay: 3, animations: {
+                self.banner.alpha = 0
+            })
+        })
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
