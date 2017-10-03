@@ -12,6 +12,7 @@
 		512A43FE1F8310D300FA129B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512A43FC1F8310D300FA129B /* Main.storyboard */; };
 		512A44001F8310D300FA129B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512A43FF1F8310D300FA129B /* Assets.xcassets */; };
 		512A44031F8310D300FA129B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512A44011F8310D300FA129B /* LaunchScreen.storyboard */; };
+		512A440B1F8316F700FA129B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A440A1F8316F700FA129B /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		512A43FF1F8310D300FA129B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		512A44021F8310D300FA129B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		512A44041F8310D300FA129B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		512A440A1F8316F700FA129B /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				512A43F81F8310D300FA129B /* AppDelegate.swift */,
 				512A43FA1F8310D300FA129B /* ViewController.swift */,
+				512A440A1F8316F700FA129B /* HistoryViewController.swift */,
 				512A43FC1F8310D300FA129B /* Main.storyboard */,
 				512A43FF1F8310D300FA129B /* Assets.xcassets */,
 				512A44011F8310D300FA129B /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512A440B1F8316F700FA129B /* HistoryViewController.swift in Sources */,
 				512A43FB1F8310D300FA129B /* ViewController.swift in Sources */,
 				512A43F91F8310D300FA129B /* AppDelegate.swift in Sources */,
 			);
@@ -277,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TCCEYF5TG;
 				INFOPLIST_FILE = YouAreFine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mitchell.YouAreFine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TCCEYF5TG;
 				INFOPLIST_FILE = YouAreFine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mitchell.YouAreFine;
 				PRODUCT_NAME = "$(TARGET_NAME)";

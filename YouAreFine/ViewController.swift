@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var happyButton: UIButton!
+    @IBOutlet var medButton: UIButton!
+    @IBOutlet var sadButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
+    
+    func breathe() {
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
